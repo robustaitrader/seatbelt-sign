@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seatbelt Sign: crypto turbulence alerts</title>
+<meta name="description" content="A heads-up when a big move in BTC, ETH, SOL or XRP becomes likely within 4 hours. How much, never which way. Experimental; not investment advice.">
+<meta property="og:title" content="Seatbelt Sign: crypto turbulence alerts">
+<meta property="og:description" content="A heads-up when a big move in BTC, ETH, SOL or XRP becomes likely within 4 hours. How much, never which way.">
+<meta property="og:type" content="website">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<style>
+  :root {
+    --bg: #f7f7f5; --text: #1d1d1b; --muted: #5e5e58; --card: #ffffff; --line: #e2e1dc;
+    --accent: #b5461f; --accent-text: #ffffff; --bubble: #eef4fb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #151514; --text: #ecebe6; --muted: #a6a59e; --card: #1f1f1d; --line: #34332f;
+      --accent: #e0703f; --accent-text: #151514; --bubble: #1d2733;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+  header { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+  .sign { font-size: 22px; }
+  .tag {
+    font-size: 12px; font-weight: 600; color: var(--muted); border: 1px solid var(--line);
+    border-radius: 999px; padding: 1px 9px;
+  }
+  h1 { font-size: clamp(30px, 6vw, 42px); line-height: 1.15; margin: 36px 0 12px; }
+  h2 { font-size: 22px; margin: 48px 0 12px; }
+  .lead { font-size: 19px; color: var(--muted); margin: 0 0 24px; }
+  .buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+  .button {
+    display: inline-block; padding: 11px 20px; border-radius: 10px; font-weight: 600;
+    text-decoration: none; border: 1px solid var(--accent); color: var(--accent);
+  }
+  .button.primary { background: var(--accent); color: var(--accent-text); }
+  .bubble {
+    background: var(--bubble); border: 1px solid var(--line); border-radius: 14px;
+    padding: 16px 18px; white-space: pre-line; font-size: 15px;
+  }
+  .note { font-size: 14px; color: var(--muted); }
+  ul { padding-left: 20px; }
+  li { margin: 6px 0; }
+  .plans { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .plan { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+  .plan b { display: block; font-size: 18px; }
+  .plan span { color: var(--muted); font-size: 15px; }
+  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <header><span class="sign" aria-hidden="true">&#9888;</span> Seatbelt Sign <span class="tag">experimental</span></header>
+
+  <h1>A heads-up before crypto gets bumpy.</h1>
+  <p class="lead">When a big move in BTC, ETH, SOL or XRP becomes likely within the next 4 hours,
+    the sign comes on. It tells you how much, never which way.</p>
+  <div class="buttons">
+    <a class="button primary" href="https://t.me/seatbelt_sign_crypto">Follow on Telegram</a>
+    <a class="button" href="#waitlist">Join the waitlist</a>
+  </div>
+
+  <h2>What an alert looks like</h2>
+  <div class="bubble">BTC turbulence alert, 24 Nov 12:00-16:00 UTC
+
+Expected move over these 4 hours: about 2.0% up or down (one standard deviation).
+Typical for BTC lately: about 1.0%.
+This forecast is in the top tenth of BTC's last 30 days.
+
+In tests on 2023-26, a big move (beyond 3 standard deviations within 4 hours) followed 7% of alert hours and 1.2% of the others.
+
+How much, not which way. Not investment advice.</div>
+  <p class="note">An example with made-up numbers.</p>
+
+  <h2>How it works</h2>
+  <ul>
+    <li>Every hour, a model forecasts how much each coin is likely to move over the next 4 hours.
+      It reads the coin's recent price swings, trading volume, funding rates and the time of day.</li>
+    <li>The sign comes on when a forecast is in the top tenth of that coin's last 30 days. A coin
+      gets one post per episode: after an alert it stays quiet for 12 hours. At most 6 posts a day.</li>
+    <li>Every Monday a scorecard shows the live record since the channel started, misses included.</li>
+  </ul>
+
+  <h2>The evidence, and its limits</h2>
+  <ul>
+    <li>Tested on years the model never trained on (2023 to 2026): a big move (beyond 3 standard
+      deviations within 4 hours) followed 7% of alert hours and 1.2% of the other hours, about 6
+      times as often.</li>
+    <li>So most alerts are <em>not</em> followed by a big move. An alert means "more likely", not
+      "certain".</li>
+    <li>It can't tell direction, and nothing here says whether to buy or sell.</li>
+    <li>It has run live since 18 November 2026. Its live record is judged on 17 February 2027, by a
+      rule written down before it started.</li>
+    <li>Not investment advice. Crypto prices can fall a long way quickly; never risk money you can't
+      afford to lose.</li>
+  </ul>
+
+  <h2 id="waitlist">Would you pay for more?</h2>
+  <p>Nothing is for sale. I'm deciding whether a paid version is worth building, so I'd like to know
+    which of these you would use:</p>
+  <div class="plans">
+    <div class="plan"><b>Free</b><span>The public channel: BTC, ETH, SOL and XRP.</span></div>
+    <div class="plan"><b>$10 a month</b><span>Alerts for 20 coins, sent to you privately, with a note
+      when each alert ends.</span></div>
+    <div class="plan"><b>$25 a month</b><span>The same, plus an API with every hourly
+      forecast.</span></div>
+  </div>
+  <p>Or you'd pay, but less than $10 a month: that's an answer too.</p>
+  <div class="buttons">
+    <a class="button primary" href="https://tally.so/r/PR9W0d">Join the waitlist</a>
+  </div>
+  <p class="note">A short form: your email address and your choice. Nothing is charged, and you can
+    ask to be removed at any time.</p>
+
+  <h2 id="privacy">Privacy</h2>
+  <ul>
+    <li><b>Who:</b> Robust AI Trader, reachable at <a href="mailto:robustaitrader@gmail.com">robustaitrader@gmail.com</a>.</li>
+    <li><b>What:</b> the email address and the choice you enter in the waitlist form.</li>
+    <li><b>Why:</b> only to tell you if a paid version starts. No newsletter, no selling, no sharing.</li>
+    <li><b>On what basis:</b> your consent. Withdraw it any time by email, and your entry is deleted.</li>
+    <li><b>How long:</b> until 6 months after this test ends (about mid-2027), then deleted.</li>
+    <li><b>Who processes it:</b> the form runs on Tally (Tally BV, Belgium), which stores the answers
+      for me.</li>
+    <li><b>This page</b> sets no cookies and runs no tracking or analytics. It is hosted on GitHub
+      Pages, which logs visitors' IP addresses for security (see GitHub's privacy statement).</li>
+    <li><b>Your rights:</b> access, correction and deletion of your data, and a complaint to your data
+      protection authority (in Hungary, the NAIH).</li>
+  </ul>
+
+  <footer>
+    Seatbelt Sign is an experiment by an independent developer. Not investment advice.
+  </footer>
+</main>
+</body>
+</html>
